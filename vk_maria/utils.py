@@ -93,7 +93,7 @@ def args_converter(method):
                 kwargs[keyword] = ','.join(str(el) for el in value)
             elif keyword == 'media_type':
                 kwargs[keyword] = ','.join(value)
-            elif keyword == 'name_case':
+            elif keyword == 'name_case' and 'intent' in kwargs:
                 kwargs[keyword] = ','.join(value)
             elif keyword == 'market_country':
                 kwargs[keyword] = ','.join(str(el) for el in value)
